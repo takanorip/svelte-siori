@@ -1,8 +1,11 @@
 <script>
 	let count = 0;
 
-	function handleClick() {
+	function handleIncrement() {
 	  count += 1;
+	}
+	function handleDecrement() {
+	  count -= 1;
 	}
 </script>
 
@@ -13,9 +16,11 @@
 	  border: none;
 	  padding: 8px 12px;
 	  border-radius: 2px;
+	  font-size: 24px;
 	}
 </style>
 
-<button on:click={handleClick}>
-  Clicked {count} {count === 1 ? 'time' : 'times'}
-</button>
+<p>{count}</p>
+
+<button on:click={handleIncrement}>+</button>
+<button on:click={handleDecrement}>-</button>
